@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 unsigned int strana_susediaca_na_zvazku(unsigned int page, unsigned int no_pages, unsigned int bundle_size)
 {
