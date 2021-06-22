@@ -8,14 +8,12 @@ unsigned int strana_susediaca_na_zvazku(unsigned int page, unsigned int no_pages
     unsigned int max_sheets=no_pages/one_sheet+1;
     unsigned int sheet=((page-1)/one_sheet)+1;
 
-    unsigned int last_sheet_size;
+    unsigned int last_sheet_size=(((no_pages+1)%one_sheet)/2)*2;
     unsigned int page_in_sheet;
     unsigned int next_in_sheet;
 
-    if ((((no_pages+1)%one_sheet)/2)*2==0)
+    if (last_sheet_size==0)
         last_sheet_size=one_sheet;
-    else
-        last_sheet_size=(((no_pages+1)%one_sheet)/2)*2;
 
     page_in_sheet=((page-1)%one_sheet)+1;
 
@@ -35,7 +33,7 @@ int main(void)
 
     page = 38;
     no_pages = 48;
-    bundle_size = 20;
+    bundle_size = 4;
 
     printf("Sused pre %u je %u", page,strana_susediaca_na_zvazku(page,no_pages,bundle_size));
 
