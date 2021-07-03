@@ -31,9 +31,9 @@ int main(void)
 {
     unsigned int page, no_pages, bundle_size;
 
-    page = 38;
-    no_pages = 48;
-    bundle_size = 4;
+    page = 21;
+    no_pages = 21;
+    bundle_size = 3;
 
     printf("Sused pre %u je %u", page,strana_susediaca_na_zvazku(page,no_pages,bundle_size));
 
